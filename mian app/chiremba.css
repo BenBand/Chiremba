@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.Naigation-bar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Naigation-bar > .page-icon > a {
+    padding: 18px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.Naigation-bar > .sign-up-or-login {
+    display: flex;
+    text-align: center;
+}
+
+.Naigation-bar > .sign-up-or-login > a {
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+    margin-right: 35px;
+}
+
+
+/* 
+.container {
+    width: 100%;
+    background-color:gainsboro;
+}
+
+.image-and-form-holder > .log-in-img {
+    width: 250px;
+    height: 250px;
+}
+
+.image-and-form-holder > .log-in-img > img {
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+} */
