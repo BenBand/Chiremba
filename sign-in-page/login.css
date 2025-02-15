@@ -16,6 +16,7 @@
 }
 /* ------- main container -------- */
 
+/* ------- form styl e-------- */
 .main-container > h1 {
     text-align: center;
     margin-top: 100px;
@@ -41,7 +42,7 @@
     background-color: #fff;
     text-align: center;
     border-radius: 2px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .form-container > form > .input-fied {
@@ -100,3 +101,21 @@
 .terms-conditions > p {
     color: #fff;
 }
+/* ------- form style -------- */
+
+/* ------- Responsive style for the form -------- */
+@media (max-width: 750px) {
+    .main-container {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(3,9,30,0.5),rgba(3,9,30,0.5)), url(sign-in-images/auzw.png);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .main-container > h1 {
+        display: none;
+    }
+}
+/* ------- Responsive style for the form -------- */
