@@ -198,6 +198,13 @@
     background-color: gainsboro;
     outline: none;
 }
+
+.btn-holder {
+    display: flex;
+    flex-direction: row;
+    margin-left: 550px;
+}
+
 .btn {
     width:  120px;
     padding: 12px;
@@ -206,10 +213,22 @@
     color: white;
     font-weight:bold;
     background-color: rgb(8, 150, 8);
-    margin-left: 820px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 120px;
     cursor: pointer;
 
+}
+.btn-previous {
+    width:  120px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight:bold;
+    background-color: red;
+    margin-top: 20px;
+   
+    cursor: pointer;
 }
 /*--------- right side style ------------*/
 /*--------- form style ------------*/

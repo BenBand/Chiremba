@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="chiremba.css">
+    <link rel="stylesheet" href="chirembaAU.css">
     <!------------ font quickSand ---------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,42 +31,46 @@
                
                 <div class="user-details-left">
                      <div class="user-first">
-                        <label for="">Student Name</label>
-                        <input type="text" placeholder="Name" class="field-data">
+                        <label for="">Date Of Birth</label>
+                        <input type="date" placeholder="yy-mm-dd" class="field-data">
                      </div>
     
                      <div class="user-second">
-                        <label for="">Age</label>
-                        <input type="text" placeholder="Age e.g 19"  class="field-data">
+                        <label for="">Faculty/Department</label>
+                        <input type="text" placeholder="e.g CEAS"  class="field-data">
                      </div>
     
                      <div class="user-third">
-                        <label for="">Parent's Number</label>
-                        <input type="tel" placeholder="+260-000-000-000" class="field-data">
+                        <label for="">Allergies</label>
+                        <input type="tel" placeholder=" e.g Hives" class="field-data">
                      </div>
 
                 </div>
     
                 <div class="user-details-right">
                     <div class="user-one">
-                        <label for="">Student ID</label>
-                        <input type="text" placeholder="e.g 200300" class="field-data">
+                        <label for="">Nationality</label>
+                        <input type="text" placeholder="Hararian" class="field-data">
                     </div>
     
                     <div class="user-second">
-                        <label for="">Student Number</label>
-                        <input type="tel" placeholder="+260-000-000-000"  class="field-data">
+                        <label for="">Marital Status</label>
+                        <select name="cars" id="cars" class="field-data">
+                            <option value=""></option>
+                            <option value="single">Single</option>
+                            <option value="maried">Maried</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widow">Widow</option>
+                          </select>
                     </div>
 
-                    <div class="user-third">
-                        <label for="">Gender</label> <br>
-                        <input type="radio" value="Female" class="field-data-radio"> Female <br>
-                       <input type="radio" value="Male" class="field-data-radio"> Male
-                    </div>
                 </div>
             </form>
             <hr>
-            <button class="btn">Next</button>
+            <div class="btn-holder">
+                <button class="btn-previous">Previous</button>
+                <button class="btn">Next</button>
+            </div>
         </div>
     </div>
 
