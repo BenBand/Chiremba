@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'quicksand'; 
 }
 
+/*--------- Nav style ------------*/
 .Naigation-bar {
     background-color: black;
     display: flex;
@@ -34,21 +35,181 @@
     text-decoration: none;
     margin-right: 35px;
 }
+/*--------- Nav style ------------*/
 
-
-/* 
-.container {
+/*--------- Background image style ------------*/
+.student-information-container {
     width: 100%;
-    background-color:gainsboro;
+    height: 100vh;
+    background-image: linear-gradient(rgba(3,9,30,0.5), rgba(3,9,30,0.5)), url(images/au-campus-aerial-view-edited.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+/*--------- Background image style ------------*/
+
+.student-details-container {
+    width: 1000px;
+    height: auto;
+    margin: 6% auto;
+    background-color: #fff;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 3px;
+    position: relative;
+}
+.student-details-container > h2 {
+    margin-bottom: 6px;
 }
 
-.image-and-form-holder > .log-in-img {
-    width: 250px;
-    height: 250px;
+/*--------- form style ------------*/
+.student-details-container > form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.image-and-form-holder > .log-in-img > img {
-    width: 80%;
-    height: 100%;
-    object-fit: contain;
-} */
+/*--------- left side style ------------*/
+.user-details-left {
+    width: 50%;
+    margin: 10px;
+}
+.user-details-left > label {
+    text-align: left;
+}
+.user-details-left > .user-first > .field-data {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+
+.user-first {
+    padding: 10px;
+    border-radius: 3px;
+}
+.user-second {
+    padding: 10px;
+    border-radius: 3px;
+}
+.user-third {
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.user-details-left > .user-first:hover {
+    background-color: gainsboro;
+    outline: none;
+}
+.user-details-left > .user-second:hover {
+    background-color: gainsboro;
+}
+.user-details-left > .user-third:hover {
+    background-color: gainsboro;
+}
+
+
+.user-details-left > .user-second > .field-data {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+
+.user-details-left > .user-third > .field-data {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+/*--------- left side style ------------*/
+
+/*--------- right side style ------------*/
+.user-details-right {
+    width: 50%;
+    margin: 10px;
+}
+.user-details-right > label {
+    text-align: left;
+}
+.user-details-right > .field-data {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+
+.user-details-right > .user-third > .field-data-radio {
+    margin-top: 12px;
+    padding: 4px;
+}
+
+
+.user-details-right > .user-one > .field-data {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+.user-details-right > .user-second > .field-data {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+
+
+.user-one {
+    padding: 10px;
+    border-radius: 3px;
+}
+.user-second {
+    padding: 10px;
+    border-radius: 3px;
+}
+.user-third {
+    padding: 10px;
+    border-radius: 3px;
+}
+
+
+.user-details-right > .user-one:hover {
+    background-color: gainsboro;
+    outline: none;
+}
+.user-details-right > .user-second:hover {
+    background-color: gainsboro;
+    outline: none;
+}
+.user-details-right > .user-third:hover {
+    background-color: gainsboro;
+    outline: none;
+}
+.btn {
+    width:  120px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight:bold;
+    background-color: rgb(8, 150, 8);
+    margin-left: 820px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+/*--------- right side style ------------*/
+/*--------- form style ------------*/
