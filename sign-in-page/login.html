@@ -10,19 +10,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <!------------ font quickSand ---------------->
     <title>Sign In</title>
+    <!----------------- ----------------->
+    <script defer src="../mian app-page-1/chiremba.js"></script>
+    <!----------------- ----------------->
 </head>
 <body class="main-container">
     <h1>AU CHIREMBA</h1>
     <div class="form-container">
-        <form action="">
+        <form action="" method="post" onsubmit="return FormValidation()">
             <div class="form-image">
                 <img src="sign-in-images/images.png" alt="">
             </div>
             <div class="div-form-image"></divclass>
                <div class="input-fied">
-                <p>Enter Your Credentials To Sign In</p>
-                <input type="text" class="fields" placeholder="Username">
-                <input type="password" class="fields" placeholder="Password">
+                <h4>Enter Your Credentials To Sign In</h4>
+
+                <input type="text" id="input-name" class="fields" name="UserName" placeholder="Username">
+                <p class="error_message" id="error-name"></p>
+
+
+                <input type="password" id="input-password" name="password" class="fields" placeholder="Password">
+                <p class="error_message" id="error-pass"></p>
+
+
                 <button class="bt-sign-in">Sign in</button>
                 <h5>Access the User Portal </Portal></h5>
                </div>
