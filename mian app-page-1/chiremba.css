@@ -303,3 +303,25 @@ h3 {
 
 /*--------- right side style ------------*/
 /*--------- form style ------------*/
+
+
+/*--------- submit outro form style ------------*/
+.submit-outro {
+    width:  360px;
+    margin: 8% 0 auto;
+    padding: 10px;
+    background-color: none;
+    display: block;
+}
+
+
+.outro-logo {
+    object-fit: cover;
+}
+
+.outro-logo > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+}
+/*--------- submit outro form style ------------*/
