@@ -345,7 +345,6 @@ h3 {
         display: block;
     }
 
-
     .btn-holder {
         display: block;
         flex-direction: none;
@@ -354,3 +353,46 @@ h3 {
     }
 }
 /* ------- Responsive style for the main app-page-1 -------- */
+
+
+
+/* ------- Responsive style for the intro page -------- */
+@media (max-width: 750px) {
+    .Naigation-bar {
+        display: none;
+    }
+
+    .student-information-container {
+        width: 100%;
+        align-items: center;
+    }
+
+    .student-details-container {
+        width: 100%;
+    }
+
+    .student-details-container > h3 {
+        font-size: 11px;
+    }
+
+    .student-details-container > h2, .student-details-container > hr {
+       display: none;
+    }
+
+    .student-details-container  > form {
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+
+    .cautions-signing > p {
+        display: none;
+    }
+
+    .btn-intro {
+        position: absolute;
+        left: -670px;
+        margin-top: 30px;
+    }
+}
+/* ------- Responsive style for the intro page -------- */

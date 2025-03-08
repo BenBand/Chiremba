@@ -241,5 +241,29 @@
 /*--------- code for the main page 2 button ------------*/
 
 
-/*--------- right side style ------------*/
-/*--------- form style ------------*/
+/* ------- Responsive style for the main app-page-1 -------- */
+@media (max-width: 750px) {
+    .student-information-container {
+        width: 100%;
+        background-image: none;
+        background-attachment: fixed;
+        background-color: gainsboro;
+    }
+
+    .student-details-container {
+        width: auto;
+        display: block;
+    }
+
+    .student-details-container > form {
+        display: block;
+    }
+
+    .btn-holder {
+        display: block;
+        flex-direction: none;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+}
+/* ------- Responsive style for the main app-page-1 -------- */
