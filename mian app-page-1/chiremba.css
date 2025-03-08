@@ -314,7 +314,6 @@ h3 {
     display: block;
 }
 
-
 .outro-logo {
     object-fit: cover;
 }
@@ -323,6 +322,25 @@ h3 {
     width: 300px;
     height: 300px;
     border-radius: 4px;
+}
+
+.outro-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.outro-links > a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.outro-links > a:hover {
+    text-decoration: underline;
+}
+
+.edit-link {
+    margin-left: 40px;
 }
 /*--------- submit outro form style ------------*/
 
@@ -396,3 +414,25 @@ h3 {
     }
 }
 /* ------- Responsive style for the intro page -------- */
+
+
+/* ------- Responsive style for the submit outro page -------- */
+@media (max-width: 750px) {
+    .submit-outro {
+        display: block;
+    }
+    
+    .outro-links {
+        margin-top: 10px;
+    }
+    
+    .outro-logo > img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .edit-link {
+        margin-left: -10px;
+    }
+}
+/* ------- Responsive style for the submit outro page -------- */
