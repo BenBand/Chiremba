@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app.css">
+    <!------------ font quickSand ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!------------ font quickSand ---------------->
+    <script defer src="./chirembaAU.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <!------------ Main container -------------->
+    <div class="student-information-container">
+        <div class="student-details-container">
+            <h2>Student Information</h2>
+                <hr>
+            <form action="/chirembaAU" method="post">
+               
+                <div class="user-details-left-chirembaAU">
+                     <div class="user-first-chirembaAU">
+                        <label for="userDateOfBirth">Date Of Birth</label>
+                        <input type="date" name="userDateOfBirth" placeholder="yy-mm-dd" class="field-data-chirembaAU" id="userDateOfBirth">
+                     </div>
+    
+                     <div class="user-second-chirembaAU">
+                        <label for="">Faculty/Department</label>
+                        <input type="text" name="department" placeholder="e.g CEAS"  class="field-data-chirembaAU">
+                     </div>
+    
+                     <div class="user-third-chirembaAU">
+                        <label for="">Allergies</label>
+                        <input type="tel" name="allergies" placeholder=" e.g Hives" class="field-data-chirembaAU">
+                     </div>
+
+                </div>
+    
+                <div class="user-details-right-chirembaAU">
+                    <div class="user-one-chirembaAU">
+                        <label for="">Nationality</label>
+                        <input type="text" name="nationality" placeholder="Hararian" class="field-data-chirembaAU">
+                    </div>
+    
+                    <div class="user-two-chirembaAU">
+                        <label for="maritalStatus">Marital Status</label>
+                        <select name="maritalStatus" id="maritalStatus" class="field-data-chirembaAU">
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-previous-chirembaAU">Previous</button>
+                    <button class="btn-next-chirembaAU">Next</button>
+                </div>
+            </form>
+            <hr class="below-btn">
+            
+        </div>
+    </div>
+
+</body>
+</html>

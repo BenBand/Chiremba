@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app.css">
+    <!------------ font quickSand ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!------------ font quickSand ---------------->
+    <title>Document</title>
+</head>
+<body>
+    <!------ Navigation Bar ------>
+    <div class="Naigation-bar">
+        <div class="page-icon">
+            <a href="">chiremba</a>
+        </div>
+        <div class="sign-up-or-login">
+            <a href="">Login / Sign Up</a>
+        </div>
+    </div>
+
+    <!------------ Main container -------------->
+    <div class="student-information-container">
+        <div class="student-details-container">
+            <h2>SIGNATURE - BEFORE SIGNING. <i>PLEASE NOTE</i></h2>
+                <hr>
+                <div class="cautions-signing">
+                    <p>1. If you sign this claim for any treatment which has not been provided you may well be committing an offence. If you become aware that the claim is submitted for services which have not been provided you must contact your medical aid society forthwith.</p> <br>
+                    <p>2.  If this treatment has not been paid then you must either sign each day the treatment is received or once only after the provider of service has inserted all his charges</p> <br>
+                    <p><b> <i>N.B</i></b> Claim forms which are signed before the day on which the treatment is to be received will be rejected</p>
+                </div>
+                <h3>MEMBER OR PATIENT TO COMPLETE THE FORM</h3>
+            <form method="post" action="/intro">
+               
+                <div class="user-details-left-intro">
+                     <div class="user-first-intro">
+                        <label for="societyAid">Select medical aid society</label>
+                        <select name="societyAid" id="societyAid" class="field-data-intro" placeholder="e.g cimas">
+                            <option value=""></option>
+                            <option value="Banmed">Banmed</option>
+                            <option value="Cement">Cement</option>
+                            <option value="Cimas">Cimas</option>
+                            <option value="Eng">Eng</option>
+                            <option value="Masca">Masca</option>
+                            <option value="Mun Byo">Mun Byo</option>
+                            <option value="Mun Hre">Mun Hre</option>
+                            <option value="Pub Ser">Pub Ser</option>
+                            <option value="Railmed">Railmed</option>
+                            
+                        </select>
+                    </div>
+                 </div>
+
+    
+                <div class="user-details-right-intro">
+                    <div class="user-one-intro">
+                        <label for="causesForTreament">Please indicate if this treatment is due to an accident</label>
+                        <select name="causesForTreament" id="causesForTreament" class="field-data-intro" >
+                            <option value=""></option>
+                            <option value="Road Traffic Accident">Road Traffic Accident</option>
+                            <option value="Accident At School">Accident At School</option>
+                            <option value="Sick">Sick</option>
+                        </select>
+                    </div>
+                    <button class="btn-intro">Next</button>
+    
+                </div>
+                
+            </form>
+            <hr class="below-btn">
+            
+        </div>
+    </div>
+</body>
+</html>

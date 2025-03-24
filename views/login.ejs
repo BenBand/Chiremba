@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app.css">
+    <!------------ font quickSand ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!------------ font quickSand ---------------->
+    <title>Sign In</title>
+    <!----------------- ----------------->
+    <script defer src="/index.js"></script>
+    <!----------------- ----------------->
+</head>
+<body class="main-container">
+    <h1>AU CHIREMBA</h1>
+    <div class="form-container">
+        <form method="post" action="/login">
+            <div class="form-image">
+                <img src="/images/au-logo.png" alt="">
+            </div>
+            <div class="div-form-image"></divclass>
+               <div class="input-fied">
+                <h4>Enter Your Credentials To Sign In</h4>
+
+                <input type="text" id="input-name" name="Username" class="fields"  placeholder="Username">
+                <!-------<p class="error_message" id="error-name"></p> --->
+
+                <input type="password" id="input-password" name="password" class="fields" placeholder="Password">
+                <p class="error_message" id="error-pass"></p>
+
+                <button class="bt-sign-in">Sign in</button>
+                <h5>Access the User Portal </Portal></h5>
+               </div>
+        </form>
+    </div>
+    <div class="terms-conditions">
+        <p>By signing into our network, you agree to bound by our <a href="">Terms and Coditions</a></p>
+    </div>
+</body>
+</html>

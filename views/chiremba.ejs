@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app.css">
+    <!------------ font quickSand ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!------------ font quickSand ---------------->
+    <title>Document</title>
+</head>
+<body>
+   
+    <!------------ Main container -------------->
+    <div class="student-information-container">
+        <div class="student-details-container">
+            <h2>Student Information</h2>
+                <hr>
+            <form action="/chiremba" method="post">
+               
+                <div class="user-details-left-chiremba">
+                     <div class="user-first-chiremba">
+                        <label for="name">Student Name</label>
+                        <input type="text" name="name" placeholder="Name" class="field-data-chiremba" id="name">
+                     </div>
+    
+
+    
+                     <div class="user-third-chiremba">
+                        <label for="parentPhoneNumber">Parent's Number</label>
+                        <input type="tel" name="parentPhoneNumber" placeholder="+260-000-000-000" class="field-data-chiremba" id="parentPhoneNumber">
+                     </div>
+
+                </div>
+    
+                <div class="user-details-right-chiremba">
+                    <div class="user-one-chiremba">
+                        <label for="studnetId">Student ID</label>
+                        <input type="text" name="userID" placeholder="e.g 200300" class="field-data-chiremba" id="studnetId">
+                    </div>
+    
+                    <div class="user-second-chiremba">
+                        <label for="phoneNumber">Student Number</label>
+                        <input type="tel" name="userPhoneNumber" placeholder="+260-000-000-000"  class="field-data-chiremba" id="phoneNumber">
+                    </div>
+
+                    <div class="user-third-chiremba">
+                        <label for="male">Male</label>
+                        <input type="radio" name="userGender" id="male" class="field-data-chiremba-radio" value="male"> <br>
+                        <label for="female">Female</label>
+                        <input type="radio" name="userGender" class="field-data-chiremba-radio" value="female" id="female">
+                    </div>
+                    </div>
+
+                    <button class="btn-previous-chiremba">Previous</button>
+                    <button class="btn-next-chiremba">Next</button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+</body>
+</html>
