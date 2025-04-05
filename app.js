@@ -156,9 +156,9 @@ app.get("/chiremba", (req, res) => {
 //posting data to chiremba page using GET method
 app.post("/chiremba", (req, res) => {
     // Distructuring input names
-    const {name, userAge, parentPhoneNumber, userID, userPhoneNumber, userGender} = req.body;
+    const {name, parentPhoneNumber, userID, userPhoneNumber, userGender} = req.body;
     //Query for inserting data to the database + rendering the chirembaAU page
-    connect.query('INSERT INTO chiremba_tb SET ?', {student_name: name, age: userAge, parents_number: parentPhoneNumber, student_id: userID, student_number: userPhoneNumber, gender: userGender}, (err)=>{
+    connect.query('INSERT INTO chiremba_tb SET ?', {student_name: name, parents_number: parentPhoneNumber, student_id: userID, student_number: userPhoneNumber, gender: userGender}, (err)=>{
         if (err) {
             console.log(err);
         } else {
@@ -207,9 +207,25 @@ app.post("/submit", (req, res) => {
 
 
 
-// Rendering intro page using GET-----------------INTRO PAGE---------------
-app.get("/admin", (req, res) => {
-    res.render(__dirname + '/views/admin.ejs');
+
+
+// Rendering reception page
+app.get("/reception", (req, res) => {
+    res.render(__dirname + '/views/reception.ejs');
+});
+
+
+app.post("/reception", (req, res) => {
+   //Distructuring the user's id
+    const {BodyTemperature, bloodPressure, BodyWeight, BodyHeight} = req.body;
+     // Inserting user data into the database
+     connect.query('INSERT INTO reception_tb SET ?', { body_temperature:BodyTemperature, blood_pressure:bloodPressure, body_weight:BodyWeight, body_height: BodyHeight}, (err, results) => {
+        if (err){
+            console.log(err);
+        } else {
+            res.render(__dirname + '/views/doctor.ejs');
+        }
+     })
 });
 
 
@@ -222,4 +238,56 @@ app.get("/admin", (req, res) => {
 
 
 
+// Rendering reception page
+app.get("/doctor", (req, res) => {
+    res.render(__dirname + '/views/doctor.ejs');
+});
+
+
+
+
+app.post("/doctor", (req, res) => {
+    //Distructuring the user's id
+     const {doctorsDiagnosis, doctorsMedication, timesTaken, dayOrWeek, daysOfTheWeek, frequencyMeds} = req.body;
+      // Inserting user data into the database
+      connect.query('INSERT INTO doctor_tb SET ?', { diagnosis: doctorsDiagnosis, medication: doctorsMedication, times_taken: timesTaken, times_per_day_week: dayOrWeek, days_of_week: daysOfTheWeek, med_frequency: frequencyMeds}, (err, results) => {
+         if (err){
+             console.log(err);
+         } else {
+            res.render(__dirname + '/views/doctor.ejs');
+         }
+      })
+ });
+
+
+
+
+
+
+
+
+
+
+// Rendering reception page
+app.get("/counselling", (req, res) => {
+    res.render(__dirname + '/views/counselling.ejs');
+});
+
+// Rendering reception page
+app.post("/counselling", (req, res) => {
+    res.render(__dirname + '/views/counselling.ejs');
+});
+
+
+
+
 app.set('view engine', 'ejs');
+
+
+
+
+
+
+// -----------------------------------------------------------
+// Displaying user data in doctor
+//------------------------------------------------------------

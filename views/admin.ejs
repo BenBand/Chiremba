@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="stylesheet" href="/app.css">
+    <!------------ font quickSand ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!------------ font quickSand ---------------->
+    <title>Doctor</title>
 </head>
-<body>
-    
+<body class="admin-body">
+    <!------ Navigation Bar ------>
+    <div class="doctors-nav-bar">
+        <div class="admin-icon">
+            <a href="">Admin</a>
+        </div>
+        
+        <div class="delete-and-search-bar">
+            <form action="">
+                <button class="admin-delete-btn"> Delete</button>
+                <input type="search" class="admin-search" placeholder="e.g 230286">
+                <button class="admin-search-btn"> Search</button>
+            </form>
+        </div>
+    </div>
+    <!------ Navigation Bar ------>
+
+     <!------ Main container ------>
+     <div class="admin-container">
+        <div class="admin-left-side">
+            <ul>
+                <li><a href="">OVERVIEW</a></li><hr>
+                <li><a href="">HISTORY</a></li><hr>
+                <li><a href="">CONTACT INFO</a></li><hr>
+                <li><a href="">REGISTER</a></li><hr>
+                <li><a href="">COMPRESS TO PDF</a></li><hr>
+                <li><a href="">OTHERS</a></li><hr>
+            </ul>
+        </div>
+
+         <!------ Code for the admin form ------>
+        <div class="admin-right-side">
+            <form action="" action="" method="">
+                <div class="left-side-User-Data">
+                    <p>Student Name:</p>
+                    <p>Student ID:</p>
+                    <p>Medical society:</p>
+                    <p>Treatment cause:</p>
+                    <p>Allergies:</p>
+                    <p>Gender:</p>
+                </div>
+                <div class="right-side-User-Data">
+                    <p>Student Phone Number:</p>
+                    <p>Parent Phone Number:</p>
+                    <p>Nationality:</p>
+                    <p>Marital Status:</p>
+                    <p>Date Of Birth:</p>
+                    <p>Faculty:</p>
+                </div>
+            </form> 
+
+
+            <div class="doctors-medical-form">
+                <form action="">
+                    <input type="text" class="doctor-input" placeholder="Name of the doctor">
+                    <input type="text" class="doctor-input" placeholder="Diagnosis">
+                    <input type="text" class="doctor-input" placeholder="Tests">
+                    <button class="doctor-btn">Save Data</button>
+                </form>
+            </div>
+        </div>
+
+        
+         <!------ Code for the admin form ------>
+     </div>
+     <hr>
+
+     <p>I hereby certify that, or members of my staff, have rendered the above services to or on  behalf of the patient. I confirm that to the best of my knowledge the patient treated is the patient named on this form. I agree that any claim for serivces not provided would be regarded as frauduled and render the person concerned to prosecution.</p>
+     <!------ Main container ------>
+
 </body>
 </html>
