@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app.css">
+    <!------------ font quickSand ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!------------ font quickSand ---------------->
+    <title>DISPENSARY</title>
+</head>
+<body class="admin-body">
+    <!------ Navigation Bar ------>
+    <div class="doctors-nav-bar">
+        <div class="admin-icon">
+            <a href="">DISPENSARY </a>
+        </div>
+        
+        <div class="delete-and-search-bar">
+            <form action="">
+                <input type="search" class="admin-search" placeholder="e.g 230286">
+                <button class="admin-search-btn"> Search</button>
+            </form>
+        </div>
+    </div>
+    <!------ Navigation Bar ------>
+
+     <!------ Main container ------>
+        <form action="/dispensary" method="get" class="dispensary">
+
+            
+               
+           
+            
+ 
+            
+        <table>
+            <tr>
+                <th>Medication: </th>
+            </tr>
+
+
+            <% if (doctor_tb.length > 0) { %>
+
+                <% for( let i = 0; i < doctor_tb.length; i++ ) { %>
+    
+                    <tr>
+                        <td> <%- doctor_tb[i].medication %> </td>
+                    </tr>
+    
+    
+                <% } %>
+    
+               <% } else { %>
+                <h1> Data not found </h1>
+              <% } %>
+            
+        </table>
+            
+        <button class="save-dispensary-data"> Okey</button>
+        </form>
+
+     <!------ Main container ------>
+
+</body>
+</html>

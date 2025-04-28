@@ -12,7 +12,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
 .Naigation-bar > .page-icon > a {
     padding: 18px;
     color: white;
@@ -22,21 +21,22 @@
     cursor: pointer;
     margin-left: 15px;
 }
-
-.Naigation-bar > .sign-up-or-login {
+.Naigation-bar > .counselling-field {
     display: flex;
     text-align: center;
 }
-
-.Naigation-bar > .sign-up-or-login > a {
+.Naigation-bar > .counselling-field > form > .To-counselling {
     color: white;
-    font-size: 20px;
-    padding: 20px;
-    text-decoration: none;
-    margin-right: 35px;
+    background: #000;
+    padding: 16px;
+    font-size: 23px;
+    cursor: pointer;
+    margin-left: -60px;
+    border: none;
+    outline: none;
 }
-/*--------- Nav style ------------*/
 
+/*--------- Nav style ------------*/
 /*--------- Background image style ------------*/
 .student-information-container {
     width: 100%;
@@ -46,8 +46,6 @@
     background-size: cover;
     position: absolute;
 }
-/*--------- Background image style ------------*/
-
 .student-details-container {
     width: 1000px;
     height: auto;
@@ -64,7 +62,7 @@
 }
 
 
-/*--------- code for the intro page(first page) ------------*/
+/*--------- code for the intro page ------------*/
 .cautions-signing {
     margin-top: 20px;
 }
@@ -74,15 +72,11 @@ h3 {
     margin-bottom: 20px;
     text-decoration: underline;
 }
-
-
-
 .btn-holder {
     display: flex;
     flex-direction: row;
     margin-left: 550px;
 }
-
 .btn {
     width:  120px;
     padding: 12px;
@@ -108,8 +102,6 @@ h3 {
    
     cursor: pointer;
 }
-/*--------- form style ------------*/
-
 
 
 /*--------- form style ------------*/
@@ -118,7 +110,6 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
 }
-
 /*--------- left side style ------------*/
 .user-details-left {
     width: 50%;
@@ -135,7 +126,6 @@ h3 {
     border: 1px solid gainsboro;
     border-radius: 3px;
 }
-
 .user-first {
     padding: 10px;
     border-radius: 3px;
@@ -148,7 +138,6 @@ h3 {
     padding: 10px;
     border-radius: 3px;
 }
-
 .user-details-left > .user-first:hover {
     background-color: gainsboro;
     outline: none;
@@ -159,8 +148,6 @@ h3 {
 .user-details-left > .user-third:hover {
     background-color: gainsboro;
 }
-
-
 .user-details-left > .user-second > .field-data {
     width: 100%;
     padding: 10px;
@@ -169,7 +156,6 @@ h3 {
     border: 1px solid gainsboro;
     border-radius: 3px;
 }
-
 .user-details-left > .user-third > .field-data {
     width: 100%;
     padding: 10px;
@@ -196,7 +182,6 @@ h3 {
     border: 1px solid gainsboro;
     border-radius: 3px;
 }
-
 .user-details-right > .user-third > .field-data {
     width: 100%;
     padding: 10px;
@@ -205,7 +190,6 @@ h3 {
     border: 1px solid gainsboro;
     border-radius: 3px;
 }
-
 .user-details-right > .user-one > .field-data {
     width: 100%;
     padding: 10px;
@@ -222,7 +206,6 @@ h3 {
     border: 1px solid gainsboro;
     border-radius: 3px;
 }
-
 .user-one {
     padding: 10px;
     border-radius: 3px;
@@ -235,7 +218,6 @@ h3 {
     padding: 10px;
     border-radius: 3px;
 }
-
 .user-details-right > .user-one:hover {
     background-color: gainsboro;
     outline: none;
@@ -255,7 +237,7 @@ h3 {
 }
 
 
-/*--------- code for the main page 1 chiremba ------------*/
+/*--------- code for the chiremba ------------*/
 .user-details-right-chiremba {
     width: 50%;
     margin: 10px;
@@ -273,8 +255,6 @@ h3 {
     background-color: gainsboro;
     outline: none;
 }
-
-
 .user-details-left-chiremba {
     width: 50%;
     margin: 10px;
@@ -283,12 +263,10 @@ h3 {
     background-color: gainsboro;
     outline: none;
 }
-
 .user-details-left-chiremba > .user-third-chiremba:hover {
     background-color: gainsboro;
     outline: none;
 }
-
 
 .field-data-chiremba {
     width: 100%;
@@ -310,7 +288,6 @@ h3 {
     padding: 10px;
     border-radius: 3px;
 }
-
 .user-third-chiremba {
     padding: 10px;
     border-radius: 3px;
@@ -320,7 +297,6 @@ h3 {
     text-align: left;
     margin-top: 10px;
 }
-
 .user-third-chiremba > .field-data-chiremba-radio {
     align-items: center;
     margin-top: 10px;
@@ -331,6 +307,8 @@ h3 {
     margin-left: 34px;
 }
 
+
+/*--------- code for the Chiremba button ------------*/
 .btn-next-chiremba {
     width: 70px;
     padding: 12px;
@@ -352,7 +330,6 @@ h3 {
     color: #fff;
     background-color: green;
 }
-
 .btn-previous-chiremba {
     width: 75px;
     padding: 12px;
@@ -374,10 +351,37 @@ h3 {
     color: #fff;
     background-color: red;
 }
-/*--------- code for the main page 1(second page) button ------------*/
+/*--------- code for the Chiremba ------------*/
 
-
-
+/* ------- Responsive style for the main app-page-1 -------- */
+@media (max-width: 750px) {
+    .student-information-container {
+        width: 100%;
+        background-image: none;
+        background-attachment: fixed;
+        background-color: gainsboro;
+    }
+    .student-details-container {
+        width: auto;
+        display: block;
+    }
+    .student-details-container > form {
+        display: block;
+    }
+    .btn-holder {
+        display: block;
+        flex-direction: none;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    .btn-next-chiremba {
+        margin-left: 210px;
+    }
+    .btn-previous-chiremba {
+        margin-left: 240px;
+    }
+}
+/* ------- Responsive style for the main app-page-1 -------- */
 
 
 /*--------- submit outro form style ------------*/
@@ -389,17 +393,14 @@ h3 {
     display: flex;
     
 }
-
 .outro-logo {
     object-fit: cover;
 }
-
 .outro-logo > img {
     width: 300px;
     height: 300px;
     border-radius: 4px;
 }
-
 .submit-outro > .send-another-form-btn {
     width: 300px;
     height: 40px;
@@ -416,7 +417,6 @@ h3 {
     text-decoration: none;
     
 }
-
 .send-another-form-btn:hover {
     color: #fff;
     background-color: green;
@@ -434,38 +434,7 @@ h3 {
     }
 }
 /* ------- Responsive style for the submit outro page - */
-
 /*--------- submit outro form style ------------*/
-
-
-/* ------- Responsive style for the main app-page-1 -------- */
-@media (max-width: 750px) {
-    .student-information-container {
-        width: 100%;
-        background-image: none;
-        background-attachment: fixed;
-        background-color: gainsboro;
-    }
-
-    .student-details-container {
-        width: auto;
-        display: block;
-    }
-
-    .student-details-container > form {
-        display: block;
-    }
-
-    .btn-holder {
-        display: block;
-        flex-direction: none;
-        margin-left: 0px;
-        margin-top: 20px;
-    }
-}
-/* ------- Responsive style for the main app-page-1 -------- */
-
-
 
 
 /* ------- style for the intro page -------- */
@@ -502,6 +471,8 @@ h3 {
     padding: 10px;
     border-radius: 3px;
 }
+
+
 /*--------- intro page button ------------*/
 .below-btn {
     margin-bottom: 50px;
@@ -531,53 +502,48 @@ h3 {
 /* ------- style for the intro page -------- */
 
 
-
-
 /* ------- Responsive style for the intro page -------- */
 @media (max-width: 750px) {
     .Naigation-bar {
         display: none;
     }
-
     .student-information-container {
         width: 100%;
         align-items: center;
     }
-
     .student-details-container {
         width: 100%;
     }
-
     .student-details-container > h3 {
         font-size: 11px;
     }
-
     .student-details-container > h2, .student-details-container > hr {
        display: none;
     }
-
     .student-details-container  > form {
         width: 100%;
         display: block;
         position: relative;
     }
-
     .cautions-signing > p {
         display: none;
     }
-
     .btn-intro {
         position: absolute;
         left: -670px;
         margin-top: 30px;
     }
+    .field-data-intro {
+        margin-left: 110px;
+    }
+    .intro-label > {
+       padding: 10px;
+    }
 }
 /* ------- Responsive style for the intro page -------- */
 
 
-
-
-/* -------------------- CODE FOR THE SIGN IN ------------------------------- */
+/* -------------------- CODE FOR THE LOGIN IN ------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -602,18 +568,15 @@ h3 {
     margin-top: 100px;
     color: #fff;
 }
-
 .form-image {
     background-color: #fff;
     width: 100%;
     height: 100%;
 }
-
 .form-image > img {
     width: 60px;
     height: 60px;
 }
-
 .form-container > form {
     width: 370px;
     margin: 10% auto 0;
@@ -623,19 +586,16 @@ h3 {
     border-radius: 2px;
     margin-top: 20px;
 }
-
 .form-container > form > .input-fied {
     margin: 20px;
     margin-top: 10px;
 }
-
 .input-fied > h4 {
     margin-top: 40px;
     color: black;
     font-size: 18px;
     font-weight: bold;
 }
-
 .input-fied > .fields {
     width:  320px;
     padding: 10px;
@@ -645,7 +605,6 @@ h3 {
     border: 1px solid gainsboro;
     outline: none;
 }
-
 .bt-sign-in {
     width:  320px;
     padding: 12px;
@@ -656,7 +615,6 @@ h3 {
     font-weight:bold;
     background-color: rgb(8, 150, 8);
 }
-
 .input-fied > h5 {
     margin-top: 60px;
     margin-bottom: 30px;
@@ -664,23 +622,19 @@ h3 {
     color: rgb(61, 61, 231);
     cursor: pointer;
 }
-
 .terms-conditions {
     text-align: center;
     margin-top: 20px;
     font-size: 20px;
 }
-
 .terms-conditions > p > a {
     color: aqua;
     text-decoration: none;
     cursor: none;
 }
-
 .terms-conditions > p {
     color: #fff;
 }
-
 .error_message {
     margin-top: 6px;
     font-size: 16px;
@@ -691,7 +645,7 @@ h3 {
 /* ------- form style -------- */
 
 
-/* ------- Responsive style for the form -------- */
+/* ------- Responsive style for the SIN-IN -------- */
 @media (max-width: 750px) {
     .main-container {
         width: 100%;
@@ -700,21 +654,19 @@ h3 {
         background-attachment: scroll;
         background-color: gainsboro;
     }
-
     .main-container > h1 {
         display: none;
     }
     .terms-conditions > p {
         color: black;
+        font-size: small;
     }
     .terms-conditions > p > a {
         color: blue;
     }
 }
-/* ------- Responsive style for the form -------- */
+/* ------- Responsive style for the SIN-IN -------- */
 /* -------------------- CODE FOR THE SIGN IN ------------------------------- */
-
-
 
 
 /* ------------------ CODE FOR THE CHIREMBAAU ------------------------------- */
@@ -879,7 +831,6 @@ h3 {
     border: 1px solid gainsboro;
     border-radius: 3px;
 }
-
 .user-details-right-chirembaAU > .user-one-chirembaAU > .field-data-chirembaAU {
     width: 100%;
     padding: 10px;
@@ -896,7 +847,6 @@ h3 {
     border: 1px solid gainsboro;
     border-radius: 3px;
 }
-
 .user-one-chirembaAU {
     padding: 10px;
     border-radius: 3px;
@@ -905,7 +855,6 @@ h3 {
     padding: 10px;
     border-radius: 3px;
 }
-
 .user-details-right-chirembaAU > .user-one-chirembaAU:hover {
     background-color: gainsboro;
     outline: none;
@@ -961,9 +910,10 @@ h3 {
     background-color: red;
 }
 /*--------- code for the chirembaAU button ------------*/
+/* ------------------ CODE FOR THE CHIREMBAAU ------------------------------- */
 
 
-/* ------- Responsive style for the main app-page-1 -------- */
+/* ------- Responsive style for the CHIREMBAAU page -------- */
 @media (max-width: 750px) {
     .student-information-container {
         width: 100%;
@@ -971,29 +921,34 @@ h3 {
         background-attachment: fixed;
         background-color: gainsboro;
     }
-
     .student-details-container {
         width: auto;
         display: block;
     }
-
     .student-details-container > form {
         display: block;
+    }
+    .user-details-right-chirembaAU {
+        position: relative;
+    }
+    .user-details-right-chirembaAU > .btn-next-chirembaAU {
+        position: relative;
+        left: -650px;
+        top: 21px;
+    }
+    .btn-previous-chirembaAU {
+        position: relative;
+        left: -800px;
     }
 }
 /* ------- Responsive style for the main app-page-1 -------- */
 
-/* ------------------ CODE FOR THE CHIREMBAAu ------------------------------- */
-
-
-
 
 /* --------------- CODE FOR THE Doctors Admin ------------------------------- */
-/*--------- Nav style for Admin ------------*/
-.admin-body {
+/*--------- Nav style for Doctor ------------*/
+.admin-body-doctor {
     background-color: gainsboro;
 }
-
 .doctors-nav-bar {
     background-color: black;
     display: flex;
@@ -1001,7 +956,6 @@ h3 {
     justify-content: space-between;
     padding: 10px;
 }
-
 .doctors-nav-bar > .admin-icon > a {
     padding: 18px;
     color: white;
@@ -1011,12 +965,10 @@ h3 {
     cursor: pointer;
     margin-left: 15px;
 }
-
 .doctors-nav-bar > .delete-and-search-bar {
     display: flex;
     text-align: center;
 }
-
 .doctors-nav-bar > .delete-and-search-bar > a {
     color: white;
     font-size: 20px;
@@ -1028,7 +980,6 @@ h3 {
 form {
     position: relative;
 }
-
 .delete-and-search-bar > form > .admin-delete-btn {
     padding: 10px;
     width: 100px;
@@ -1038,10 +989,9 @@ form {
     border: none;
     border-radius: 1px;
     position: absolute;
-    left: -400px;
+    left: -350px;
     cursor: pointer;
 }
-
 .delete-and-search-bar > form > .admin-search {
     width: 150px;
     padding: 10px;
@@ -1051,7 +1001,6 @@ form {
     border:  none;
     outline: none;
 }
-
 .delete-and-search-bar > form > .admin-search-btn {
     padding: 10px;
     width: 100px;
@@ -1064,106 +1013,610 @@ form {
     cursor: pointer;
 
 }
-/*--------- Nav style for Admin ------------*/
+/*--------- Nav style for Doctor ------------*/
 
-.admin-container {
+.admin-container-doctor {
     background-color: #00ADB5;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 }
-
-.admin-left-side {
+.doctor-left-side {
     width: 20%;
     height: 500px;
     background-color: #00ADB5;
 }
-
-.admin-left-side:hover{
+.doctor-left-side:hover{
     background-color: #0cc2bc;
 }
-
-.admin-left-side  > ul > li {
+.doctor-left-side  > ul > li {
     list-style-type: none;
     margin-top: 40px;
     margin-left: 45px;
 }
-
-.admin-left-side  > ul > li > a {
+.doctor-left-side  > ul > li > a {
     padding: 25px;
     text-decoration: none;
     color: #fff;
 }
-
-.admin-left-side  > ul > li > a:hover{
+.doctor-left-side  > ul > li > a:hover{
     color: #000;
 }
-
 .left-side-User-Data {
     padding: 10px;
     border-radius: 6px;
     background-color: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,0.6);
 }
-
 .left-side-User-Data > p {
     margin-top: 15px;
 }
-
-
-.admin-right-side {
+.doctor-right-side {
     width: 80%;
     background-color: white;
     padding: 30px;
 }
-
-
-.admin-right-side > form {
+.doctor-right-side-data {
     display: flex;
     justify-content: space-between;
     position: absolute;
 }
-
-.right-side-User-Data {
+.right-side-User-Data-2 {
     padding: 10px;
     position: relative;
-    left: 250px;
+    left: 60px;
     border-radius: 6px;
     background-color: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,0.6);
 }
-
-
-.right-side-User-Data > p {
+.right-side-User-Data-3 {
+    padding: 10px;
+    position: relative;
+    left: 120px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+.right-side-User-Data-4 {
+    padding: 10px;
+    position: relative;
+    left: 180px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+.right-side-User-Data-2 > p {
     margin-top: 15px;
 }
 
 
-.doctors-medical-form {
-    margin-top: 250px;
+.doctor-user-data {
+    position: absolute;
 }
-
-.doctor-input {
-    padding: 8px;
-    width: 58%;
-    margin-top: 8px;
-    border-radius: 4px;
-    outline: none;
-    border: 2px solid gainsboro;
-}
-
-.doctor-btn {
+.doctor-user-data > .patient-diagnosis-doc {
+    width: 100%;
     padding: 10px;
-    width: 58%;
-    margin-top: 18px;
-    border-radius: 4px;
+    position: relative;
+    left: 310px;
+    top: 140px;
+    border: none;
+    border-bottom: 1px solid #00ADB5;
+    outline: none;
+}
+.patient-medication-doc {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    left: 310px;
+    top: 170px;
+    border: none;
+    border-bottom: 1px solid #00ADB5;
+    outline: none;
+}
+.taken-time {
+    position: relative;
+    left: 310px;
+    top: 210px;
+}
+.times-taken {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    text-align: center;
+}
+.save-data-doc-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+   background-color: rgb(8, 150, 8);
+   outline: none;
+   border: none;
+   border-radius: 4px;
+   position: relative;
+   left: 310px;
+   top: 270px;
+   cursor: pointer;
+}
+.days-of-the-week {
+   position: relative;
+   left: 310px;
+   top: 230px;
+}
+.frequency {
+    position: relative;
+   left: 310px;
+   top: 250px;
+}
+.dayoftheweek-1 {
+    margin-left: 8px;
+}
+.dayoftheweek-2 {
+    margin-left: 8px;
+}
+.daysoftheweek {
+    margin-left: 8px;
+}
+.daysoftheweek-1 {
+    margin-left: 8px;
+}
+.daysoftheweek-2 {
+    margin-left: 8px;
+}
+.daysoftheweek-3 {
+    margin-left: 8px;
+}
+.daysoftheweek-4 {
+    margin-left: 8px;
+}
+.daysoftheweek-5 {
+    margin-left: 8px;
+}
+.daysoftheweek-6 {
+    margin-left: 8px;
+}
+.daysoftheweek-7 {
+    margin-left: 8px;
+}
+.howfrequent {
+    margin-left: 8px;
+}
+.howfrequent-1 {
+    margin-left: 8px;
+}
+.howfrequent-2 {
+    margin-left: 8px;
+}
+
+/* --------------- Temperature color ------------------------------- */
+.normalTemp {
+    color: green;
+}
+.aboveTemp {
+    color: red;
+}
+.belowTemp {
+    color: black;
+}
+
+
+.normalPressure {
+    color: green;
+}
+.elevetedPressure {
+    color: rgb(95, 8, 194);
+}
+.highPressure {
+    color: red;
+}
+.higherPressure {
+    color: rgb(199, 6, 6);
+}
+.hyperPressure {
+    color: rgb(114, 3, 3);
+}
+/* --------------- CODE FOR THE Doctors Page ------------------------------- */
+
+
+/* ---------- Responsiveness for Doctors Page -------------- */
+@media (max-width: 750px) {
+    .admin-container-doctor {
+        display: block;
+        background-color: gainsboro;
+        margin-top: -30px;
+    }
+    .admin-body-doctor {
+        background-color: gainsboro;
+    }
+    .doctors-nav-bar {
+        background-color: gainsboro;
+        display: block;
+    }
+    .doctor-right-side-data {
+        display: none;
+    }
+    .doctor-user-data {
+        margin-left: -300px;
+        margin-top: -475px;
+    }
+    .doctor-left-side {
+        background-color: gainsboro;
+    }
+    .doctor-left-side > ul > li a {
+        color: #000;
+    }
+}
+/* ---------- Responsiveness for Doctors Page -------------- */
+
+
+/* --------------- CODE FOR THE Reception Page ---------------------- */
+
+.admin-body-reception {
+    background-color: gainsboro;
+}
+.reception-nav-bar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.reception-nav-bar > .admin-icon > a {
+    padding: 18px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.reception-nav-bar > .delete-and-search-bar {
+    display: flex;
+    text-align: center;
+}
+.reception-nav-bar > .delete-and-search-bar > a {
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+    margin-right: 35px;
+}
+form {
+    position: relative;
+}
+.delete-and-search-bar > form > .admin-delete-btn {
+    padding: 10px;
+    width: 100px;
+    color: #fff;
+    background-color: red;
     outline: none;
     border: none;
+    border-radius: 1px;
+    position: absolute;
+    left: -350px;
+    cursor: pointer;
+}
+.delete-and-search-bar > form > .admin-search {
+    width: 150px;
+    padding: 10px;
+    position: absolute;
+    left: -200px;
+    border-radius: 1px;
+    border:  none;
+    outline: none;
+}
+.delete-and-search-bar > form > .admin-search-btn {
+    padding: 10px;
+    width: 100px;
     color: #fff;
-    background-color: rgb(8, 150, 8);
+    background-color: green;
+    outline: none;
+    border: none;
+    margin-left: -50px;
+    border-radius: 1px;
+    cursor: pointer;
+
+}
+
+
+.reception-container {
+    background-color: #00ADB5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.reception-left-side {
+    width: 20%;
+    height: 500px;
+    background-color: #00ADB5;
+}
+.reception-left-side:hover{
+    background-color: #0cc2bc;
+}
+.reception-left-side  > ul > li {
+    list-style-type: none;
+    margin-top: 40px;
+    margin-left: 45px;
+}
+.reception-left-side  > ul > li > a {
+    padding: 25px;
+    text-decoration: none;
+    color: #fff;
+}
+.reception-left-side  > ul > li > a:hover{
+    color: #000;
+}
+.left-side-User-Data {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+.left-side-User-Data > p {
+    margin-top: 15px;
+}
+.reception-right-side {
+    width: 80%;
+    background-color: white;
+    padding: 30px;
+}
+.reception-right-side-data {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+.right-side-User-Data-2 {
+    padding: 10px;
+    position: relative;
+    left: 60px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+.right-side-User-Data-3 {
+    padding: 10px;
+    position: relative;
+    left: 120px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+.right-side-User-Data-4 {
+    padding: 10px;
+    position: relative;
+    left: 180px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+.right-side-User-Data-2 > p {
+    margin-top: 15px;
+}
+
+
+.reception-user-data {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    padding: 8px;
+}
+.reception-user-data > .reception-input-field {
+    width: 100%;
+    padding: 6px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.save-data-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+   background-color: rgb(8, 150, 8);
+   outline: none;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+
+/* --------------- User Image ------------------------------- */
+.student-img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    right: 450px;
+    
+}
+.student-img > img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px dotted #000;
+    cursor: pointer;
 }
 
 body > p {
     padding: 10px;
 }
-/* --------------- CODE FOR THE Doctors Admin ------------------------------- */
+/* --------------- User Image ------------------------------- */
+/* --------------- CODE FOR THE Reception Page ---------------------- */
+
+
+/* ---------- Responsiveness for reception page -------------- */
+@media (max-width: 750px) {
+    .reception-nav-bar {
+        display: none;
+    }
+    .reception-container {
+        display: block;
+        background-color: gainsboro;
+    }
+    .student-img > img {
+        display: none;
+    }
+    .reception-right-side {
+        display: none;
+    }
+    .reception-left-side {
+        background-color: gainsboro;
+    }
+    .reception-left-side ul > li > a {
+        color: #000;
+    }
+    .reception-user-data {
+        margin-top: 90px;
+        margin-left: -270px;
+    }
+    .admin-body-reception > p {
+        margin-top: 100px;
+        background-color: gainsboro;
+    }
+}
+/* ---------- Responsiveness for reception page -------------- */
+
+
+/* ----------- CODE FOR THE COUNSELLING PAGE ------------------------------- */
+.Counsellig-main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.Counsellig-left-details {
+    width: 20%;
+    padding: 20px;
+    height: 568px;
+    background-color: #00ADB5;
+}
+.Counsellig-left-details > ul > li {
+    list-style-type: none;
+    margin-top: 40px;
+    margin-left: 45px;
+    
+}
+.Counsellig-left-details > ul > li > a {
+    text-decoration: none;
+    color: #000;
+}
+.Counsellig-right-details {
+    width: 80%;
+    padding: 20px;
+    display: block;
+    margin-top: -35px;
+}
+
+.row-1 {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.row-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.row-1 > .row-1-details > img {
+    width: 220px;
+    height: 195px;
+    border-radius: 4px;
+}
+.row-2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.row-2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.row-2 > .row-2-details > img {
+    width: 220px;
+    height: 195px;
+    border-radius: 4px;
+}
+/* ----------- CODE FOR THE COUNSELLING PAGE ------------------------------- */
+
+/* -------- Responsiveness for the counselling page -------- */
+@media (max-width: 750px) {
+    .Naigation-bar {
+        display: block;
+        align-content: center;
+    }
+    .Naigation-bar > .page-icon {
+        text-align: center;
+    }
+    .Naigation-bar > .counselling-field {
+        margin-left: 180px;
+    }
+    .Counsellig-main-content {
+        display: block;
+    }
+    .Counsellig-left-details {
+        background-color: #fff;
+    }
+    hr {
+        display: none;
+    }
+    .Counsellig-left-details {
+        text-align: center;
+        margin-left: 50px;
+    }
+    .Counsellig-right-details {
+        margin-top: -210px;
+    }
+    .row-1 {
+        display: block;
+    }
+    .row-1 > .row-1-details {
+        margin-top: 35px;
+    }
+    .row-2 {
+        display: block;
+    }
+    .row-2 > .row-2-details {
+        margin-top: 35px;
+    }
+}
+/* -------- Responsiveness for the counselling page -------- */
+
+
+/* -----------  CODE FOR THE DISPENSARY --*/
+.dispensary {
+    width: 350px;
+    margin: 8% auto 0;
+    padding: 20px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+    border-radius: 2px;
+}
+.disp-name {
+    margin-bottom: 10px;
+}
+.disp-diagnosis {
+    margin-bottom: 10px;
+}
+.disp-meds {
+    margin-bottom: 10px;
+}
+.disp-times-per {
+    margin-bottom: 10px;
+}
+.save-dispensary-data {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: rgb(8, 150, 8);
+    outline: none;
+    border:  none;
+    cursor: pointer;
+}
+/* -----------  CODE FOR THE DISPENSARY --*/

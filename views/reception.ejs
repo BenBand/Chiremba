@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app.css">
+    <!------------ font quickSand ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!------------ font quickSand ---------------->
+    <title>RECEPTION</title>
+</head>
+<body class="admin-body-reception">
+    <!------ Navigation Bar ------>
+    <div class="reception-nav-bar">
+        <div class="admin-icon">
+            <a href="">Reception</a>
+        </div>
+        
+        <div class="delete-and-search-bar">
+            <form action="">
+                <button class="admin-delete-btn"> Delete Form</button>
+                <input type="search" class="admin-search" placeholder="e.g 230286">
+                <button class="admin-search-btn"> Search</button>
+            </form>
+        </div>
+    </div>
+    <!------ Navigation Bar ------>
+
+     <!------ Main container ------>
+     <div class="reception-container">
+        <div class="reception-left-side">
+            <ul>
+                <li><a href="">OVERVIEW</a></li><hr>
+                <li><a href="">MEMBERSHIP</a></li><hr>
+                <li><a href="">PAYMENT</a></li><hr>
+                <li><a href="">DIAGNOSIS</a></li><hr>
+            </ul>
+        </div>
+
+         <!------ Code for the admin form ------>
+        <div class="reception-right-side">
+            <div class="reception-right-side-data">
+                <div class="left-side-User-Data">
+                    <p> Names: <strong> Bernard Banda </strong></p>
+                </div>
+                <div class="right-side-User-Data-2">
+                    <p>Membership: <strong> Member</strong></p>
+                </div>
+                <div class="right-side-User-Data-3">
+                    <p>Payment: <strong> Cimas</strong></p>
+                </div>
+            </div> 
+        </div>
+
+        <form method="post" action="/reception" class="reception-user-data">
+            <label for="BodyTemperature">Temperature: <small><em>Celsius</em></small></label>
+            <select name="BodyTemperature" id="BodyTemperature" class="reception-input-field">
+                <option value=""></option>
+                <option value="42" class="aboveTemp">42</option>
+                <option value="40" class="aboveTemp">40</option>
+                <option value="37.5" class="aboveTemp">37.5</option>
+                <option value="37.2" class="normalTemp">37.2</option>
+                <option value="36.5" class="normalTemp">36.5</option>
+                <option value="36.1" class="normalTemp">36.1</option>
+                <option value="35.5" class="belowTemp">35.5</option>
+                <option value="30" class="belowTemp">30</option>
+                <option value="28" class="belowTemp">28</option>
+            </select><br>
+
+            <label for="bloodPressure">Blood Pressure: <small><em>Systolic and Diastolic</em></small></label>
+            <select name="bloodPressure" id="bloodPressure" class="reception-input-field">
+                <option value=""></option>
+                <option value="120 and 80" class="normalPressure"> 120 and 80 </option>
+                <option value="120 - 129 and 80" class="elevetedPressure">120 - 129 and 80</option>
+                <option value="130 - 139 and 80 - 89" class="highPressure">130 - 139 and 80 - 89</option>
+                <option value="140 or 90" class="higherPressure">140 or 90 </option>
+                <option value="180 and/or 120" class="hyperPressure">180 and/or 120</option>
+            </select><br>
+
+            <label for="BodyWeight">Weight</label>
+            <input type="text" id="Weight" name="BodyWeight" class="reception-input-field" placeholder="eg 130 ibs"> <br>
+
+            <label for="BodyHeight">Height</label>
+            <input type="text" id="Height" name="BodyHeight" class="reception-input-field" placeholder="eg 159 cm"> <br>
+
+            <button class="save-data-btn"> Save Data</button>
+        </form>
+
+        <div class="student-img">
+            <img src="/images/4062390.jpgf" alt="">
+        </div>
+         <!------ Code for the admin form ------>
+    </div>
+     <hr>
+
+     <p>I hereby certify that, or members of my staff, have rendered the above services to or on  behalf of the patient. I confirm that to the best of my knowledge the patient treated is the patient named on this form. I agree that any claim for serivces not provided would be regarded as frauduled and render the person concerned to prosecution.</p>
+     <!------ Main container ------>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app.css">
+    <!------------ font quickSand ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!------------ font quickSand ---------------->
+    <title>Doctor</title>
+</head>
+<body class="admin-body-doctor">
+    <!------ Navigation Bar ------>
+    <div class="doctors-nav-bar">
+        <div class="admin-icon">
+            <a href="">DOCTOR</a>
+        </div>
+        
+        <div class="delete-and-search-bar">
+            <form action="">
+                <button class="admin-delete-btn"> Delete Form</button>
+                <input type="search" class="admin-search" placeholder="e.g 230286">
+                <button class="admin-search-btn"> Search</button>
+            </form>
+        </div>
+    </div>
+    <!------ Navigation Bar ------>
+
+     <!------ Main container ------>
+     <div class="admin-container-doctor">
+        <div class="doctor-left-side">
+            <ul>
+                <li><a href="">OVERVIEW</a></li><hr>
+                <li><a href="">MEMBERSHIP</a></li><hr>
+                <li><a href="">PAYMENT</a></li><hr>
+                <li><a href="">DIAGNOSIS</a></li><hr>
+            </ul>
+        </div>
+
+         <!------ Code for the right side form ------>
+        <div class="doctor-right-side">
+            <div class="doctor-right-side-data">
+                <div class="left-side-User-Data">
+                    <p> Temperature: <strong> 37.2 </strong></p>
+                </div>
+                <div class="right-side-User-Data-2">
+                    <p>Blood Pressure: <strong> 20 and 80 </strong></p>
+                </div>
+                <div class="right-side-User-Data-3">
+                    <p>Body Weight: <strong> 70 </strong></p>
+                </div>
+                <div class="right-side-User-Data-4">
+                    <p>Height: <strong> 40 </strong></p>
+                </div>
+            </div> 
+        </div>
+
+        <form action="/doctor" method="post" class="doctor-user-data">
+            <input type="text" class="patient-diagnosis-doc" id="doctors-diagnosis" name="doctorsDiagnosis" placeholder="Diagnosis">
+
+            <input type="text" class="patient-medication-doc" id="doctors-medication" name="doctorsMedication" placeholder="Medication">
+
+            <div class="taken-time">
+                <label for="timesTaken">Taken </label>
+                <input type="text" name="timesTaken" class="times-taken">
+
+                <label for="dayOrWeek"> times per  </label>
+                <input type="radio" value="Day" class="dayoftheweek-1" name="dayOrWeek" id="Day"> Day  
+                <input type="radio" value="Week" class="dayoftheweek-2" name="dayOrWeek" id="Week"> Week
+            </div>
+            
+            <div class="days-of-the-week">
+                <label for="daysOfTheWeek">Days Of The Week  </label>
+                <input type="checkbox" name="daysOfTheWeek" value="Mon" id="Mon" class="daysoftheweek"> Mon
+                <input type="checkbox" name="daysOfTheWeek" value="Tue" id="Tue" class="daysoftheweek-1"> Tue 
+                <input type="checkbox" name="daysOfTheWeek" value="Wed" id="Wed" class="daysoftheweek-2"> Wed 
+                <input type="checkbox" name="daysOfTheWeek" value="Thu" id="Thu" class="daysoftheweek-3"> Thu 
+                <input type="checkbox" name="daysOfTheWeek" value="Fri" id="Fri" class="daysoftheweek-4"> Fri 
+                <input type="checkbox" name="daysOfTheWeek" value="Sat" id="Sat" class="daysoftheweek-5"> Sat 
+                <input type="checkbox" name="daysOfTheWeek" value="Sun" id="Sun" class="daysoftheweek-6"> Sun 
+                <input type="checkbox" name="daysOfTheWeek" value="All Week" id="All Week" class="daysoftheweek-7"> All Week 
+            </div>
+
+
+            <div class="frequency">
+                <label for="frequencyMeds"> Frequency </label>
+                <input type="checkbox" name="frequencyMeds" value="Morning" id="Mon" class="howfrequent"> Morning
+                <input type="checkbox" name="frequencyMeds" value="Noon" id="Tue" class="howfrequent-1"> Noon 
+                <input type="checkbox" name="frequencyMeds" value="Night" id="Wed" class="howfrequent-2"> Night 
+                
+                <input type="checkbox" name="frequencyMeds" value="All" id="All" class="daysoftheweek-6"> All 
+            </div>
+            
+
+            <button class="save-data-doc-btn"> Save Data</button>
+        </form>
+         <!------ Code for the admin form ------>
+     </div>
+     <hr>
+
+     <p>I hereby certify that, or members of my staff, have rendered the above services to or on  behalf of the patient. I confirm that to the best of my knowledge the patient treated is the patient named on this form. I agree that any claim for serivces not provided would be regarded as frauduled and render the person concerned to prosecution.</p>
+     <!------ Main container ------>
+
+</body>
+</html>
