@@ -29,39 +29,22 @@
 
      <!------ Main container ------>
         <form action="/dispensary" method="get" class="dispensary">
+            <label for="" class="dispensary-label">Name</label> <p><strong>Joseph Malunga</strong></p>
 
-            
-               
-           
-            
- 
-            
-        <table>
-            <tr>
-                <th>Medication: </th>
-            </tr>
+            <label for="" class="dispensary-label">Diagnosis</label>
+            <p><strong>Malaria</strong></p>
 
+            <label for="" class="dispensary-label">Medication</label>
+            <p><strong>Panado</strong></p>
 
-            <% if (doctor_tb.length > 0) { %>
+            <label for="" class="dispensary-label">Times per day</label>
+            <p><strong>3</strong></p>
 
-                <% for( let i = 0; i < doctor_tb.length; i++ ) { %>
-    
-                    <tr>
-                        <td> <%- doctor_tb[i].medication %> </td>
-                    </tr>
-    
-    
-                <% } %>
-    
-               <% } else { %>
-                <h1> Data not found </h1>
-              <% } %>
-            
-        </table>
+            <label for="" class="dispensary-label">Days of the week</label> 
+            <p><strong>7</strong></p> <br>
             
         <button class="save-dispensary-data"> Okey</button>
         </form>
-
      <!------ Main container ------>
 
 </body>

@@ -1251,7 +1251,6 @@ form {
 
 
 /* --------------- CODE FOR THE Reception Page ---------------------- */
-
 .admin-body-reception {
     background-color: gainsboro;
 }
@@ -1619,4 +1618,16 @@ body > p {
     border:  none;
     cursor: pointer;
 }
+.dispensary-label {
+    display: flex;
+    margin-top: 10px;
+}
 /* -----------  CODE FOR THE DISPENSARY --*/
+
+/* -------- Responsiveness for the Dispensary page -------- */
+@media (max-width: 750px) {
+    .doctors-nav-bar {
+        display: none;
+    }
+}
+/* -------- Responsiveness for the Dispensary page -------- */
