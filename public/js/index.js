@@ -1,5 +1,4 @@
 // Signing-page-code
-
 function FormValidation(){
     const userName = document.getElementById("input-name").value;
     const userPass = document.getElementById("input-password").value;
