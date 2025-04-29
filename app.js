@@ -3,9 +3,7 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
-const ejs = require('ejs');
 //const {check, validationResult} = require('express-validator');
-
 
 // Creating a server and listening the port
 const app = express();
@@ -13,36 +11,36 @@ app.listen(1212, () => {
     console.log('The server is up and running');
 })
 
-
-
+// Setting the view engine
+app.set('view engine', 'ejs');
 // Using body-parser to encode user data
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded( {extended: true}));
 app.use(express.static(__dirname + "/public"));
-
-
-//const urlencodedParser = bodyParser.urlencoded({extended: false});
-
-// Rendering EJS files
 
 // middleware
 app.use(express.json());
 
-
-
 // Connecting mysql with nodeJs
-const connect = mysql.createConnection({
+let connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     database: 'chiremba_db'
 });
 
+connection.connect((err) => {
+    if(err) {
+        console.log(err);
+        
+    } else {
+        console.log("Database Connected Successfully");
+    }
+})
 
 // Rendering sign in page with GET request-----------INTRO PAGE
 app.get("/login", (req, res) => {
     res.render(__dirname + '/views/login');
  });
-
 
  // Rendering sign in page with POST request
  app.post("/login", async (req, res) => {
@@ -54,7 +52,7 @@ app.get("/login", (req, res) => {
      let hashedpassword = await bcrypt.hash(password, 8);
     
 
-     connect.query('INSERT INTO chiremba_user_in SET ?', {Username: Username, user_password: hashedpassword}, (err, results) => {
+     connection.query('INSERT INTO chiremba_user_in SET ?', {Username: Username, user_password: hashedpassword}, (err, results) => {
         if(err) {
             console.log(err);
         } else {
@@ -65,10 +63,6 @@ app.get("/login", (req, res) => {
      
   });
  
-
-
-
-
 
 //app.post("/login", 
     // checking for username
@@ -129,14 +123,13 @@ app.get("/intro", (req, res) => {
     res.render(__dirname + '/views/intro.ejs');
 });
 
-
 // Rendering intro page using POST
 app.post("/intro", (req, res) => {
     //distructuring the names for collecting user data
     const { societyAid, causesForTreament} = req.body;
 
     // Query for inserting user data
-    connect.query('INSERT INTO intro_tb SET ?', {society_aid:societyAid, treatment_cause:causesForTreament}, (err, results) => {
+    connection.query('INSERT INTO intro_tb SET ?', {society_aid:societyAid, treatment_cause:causesForTreament}, (err, results) => {
         if(err) {
             console.log(err);
         } else {
@@ -146,19 +139,17 @@ app.post("/intro", (req, res) => {
     })
 });
 
-
 // Rendering first sign page using GET method---------------CHIREMBA PAGE-------
 app.get("/chiremba", (req, res) => {
     res.render(__dirname + '/views/chiremba.ejs');
 });
-
 
 //posting data to chiremba page using GET method
 app.post("/chiremba", (req, res) => {
     // Distructuring input names
     const {name, parentPhoneNumber, userID, userPhoneNumber, userGender} = req.body;
     //Query for inserting data to the database + rendering the chirembaAU page
-    connect.query('INSERT INTO chiremba_tb SET ?', {student_name: name, parents_number: parentPhoneNumber, student_id: userID, student_number: userPhoneNumber, gender: userGender}, (err)=>{
+    connection.query('INSERT INTO chiremba_tb SET ?', {student_name: name, parents_number: parentPhoneNumber, student_id: userID, student_number: userPhoneNumber, gender: userGender}, (err)=>{
         if (err) {
             console.log(err);
         } else {
@@ -167,15 +158,10 @@ app.post("/chiremba", (req, res) => {
     })
 });
 
-
-
-
-
 // Rendering chirembaAU page--------------------chirembaAU---------------------
 app.get("/chirembaAU", (req, res) => {
     res.render(__dirname + '/views/chirembaAU.ejs');
 });
-
 
 // Rendering second sign page
 app.post("/chirembaAU", (req, res) => {
@@ -183,7 +169,7 @@ app.post("/chirembaAU", (req, res) => {
     const {userDateOfBirth, department, allergies, nationality, maritalStatus} = req.body;
 
     //Database queries + rendering the submit page
-    connect.query('INSERT INTO chirembaau_tb SET ?', {date_of_birth: userDateOfBirth, faculty_or_department: department, allergies: allergies, nationality: nationality, marital_status: maritalStatus}, (err) => {
+    connection.query('INSERT INTO chirembaau_tb SET ?', {date_of_birth: userDateOfBirth, faculty_or_department: department, allergies: allergies, nationality: nationality, marital_status: maritalStatus}, (err) => {
         if (err) {
             console.log(err);
         } else {
@@ -192,34 +178,25 @@ app.post("/chirembaAU", (req, res) => {
     })
 });
 
-
-
-
 // Rendering second sign page
 app.get("/submit", (req, res) => {
     res.render(__dirname + '/views/submit.ejs');
 });
 
-
 app.post("/submit", (req, res) => {
     res.render(__dirname + '/views/intro.ejs');
 });
-
-
-
-
 
 // Rendering reception page
 app.get("/reception", (req, res) => {
     res.render(__dirname + '/views/reception.ejs');
 });
 
-
 app.post("/reception", (req, res) => {
    //Distructuring the user's id
     const {BodyTemperature, bloodPressure, BodyWeight, BodyHeight} = req.body;
      // Inserting user data into the database
-     connect.query('INSERT INTO reception_tb SET ?', { body_temperature:BodyTemperature, blood_pressure:bloodPressure, body_weight:BodyWeight, body_height: BodyHeight}, (err, results) => {
+     connection.query('INSERT INTO reception_tb SET ?', { body_temperature:BodyTemperature, blood_pressure:bloodPressure, body_weight:BodyWeight, body_height: BodyHeight}, (err, results) => {
         if (err){
             console.log(err);
         } else {
@@ -228,47 +205,46 @@ app.post("/reception", (req, res) => {
      })
 });
 
-
-
-
-
-
-
-
-
-
-
 // Rendering reception page
 app.get("/doctor", (req, res) => {
     res.render(__dirname + '/views/doctor.ejs');
 });
 
-
-
-
 app.post("/doctor", (req, res) => {
     //Distructuring the user's id
      const {doctorsDiagnosis, doctorsMedication, timesTaken, dayOrWeek, daysOfTheWeek, frequencyMeds} = req.body;
       // Inserting user data into the database
-      connect.query('INSERT INTO doctor_tb SET ?', { diagnosis: doctorsDiagnosis, medication: doctorsMedication, times_taken: timesTaken, times_per_day_week: dayOrWeek, days_of_week: daysOfTheWeek, med_frequency: frequencyMeds}, (err, results) => {
+      connection.query('INSERT INTO doctor_tb SET ?', { diagnosis: doctorsDiagnosis, medication: doctorsMedication, times_taken: timesTaken, times_per_day_week: dayOrWeek, days_of_week: daysOfTheWeek, med_frequency: frequencyMeds}, (err, results) => {
          if (err){
              console.log(err);
          } else {
-            res.render(__dirname + '/views/doctor.ejs');
+            res.render(__dirname + '/views/dispensary.ejs');
          }
       })
  });
 
-
-
-
-
-
-
-
-
-
 // Rendering reception page
+app.get("/dispensary", (req, res) => {
+    res.render(__dirname + '/views/dispensary.ejs');
+});
+
+app.get("/dispensary", (req, res) => {
+    connection.query('SELECT * FROM chiremba_tb', (err, results) => {
+        if(err) {
+            console.log(err);
+
+        } else {
+
+            console.log(results);
+            
+            res.render(__dirname + '/views/dispensary.ejs', { doctor_tb: results });
+            
+           
+        }
+    });
+});
+
+// Rendering counselling page
 app.get("/counselling", (req, res) => {
     res.render(__dirname + '/views/counselling.ejs');
 });
@@ -277,15 +253,6 @@ app.get("/counselling", (req, res) => {
 app.post("/counselling", (req, res) => {
     res.render(__dirname + '/views/counselling.ejs');
 });
-
-
-
-
-app.set('view engine', 'ejs');
-
-
-
-
 
 
 // -----------------------------------------------------------
