@@ -5,17 +5,16 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 //const {check, validationResult} = require('express-validator');
 
-// Creating a server and listening the port
+// Assigning express to an instance called app
 const app = express();
-app.listen(1212, () => {
-    console.log('The server is up and running');
-})
 
 // Setting the view engine
 app.set('view engine', 'ejs');
 // Using body-parser to encode user data
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded( {extended: true}));
+// Configuring expree to receive data from the frontend form
+app.use(express.urlencoded( {extended: true}));
+// This helps express to know or keep track of the items inside public
 app.use(express.static(__dirname + "/public"));
 
 // middleware
@@ -254,6 +253,9 @@ app.post("/counselling", (req, res) => {
     res.render(__dirname + '/views/counselling.ejs');
 });
 
+app.listen(1212, () => {
+    console.log('The server is up and running');
+});
 
 // -----------------------------------------------------------
 // Displaying user data in doctor

@@ -21,19 +21,22 @@
     cursor: pointer;
     margin-left: 15px;
 }
-.Naigation-bar > .counselling-field {
-    display: flex;
-    text-align: center;
-}
-.Naigation-bar > .counselling-field > form > .To-counselling {
-    color: white;
-    background: #000;
+.nav-links {
     padding: 16px;
-    font-size: 23px;
-    cursor: pointer;
-    margin-left: -60px;
-    border: none;
-    outline: none;
+}
+.nav-links > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links > ul > li {
+    list-style-type: none;
+}
+.nav-links > ul > li > a {
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
 }
 
 /*--------- Nav style ------------*/
