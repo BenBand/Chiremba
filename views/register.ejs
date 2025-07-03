@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app.css">
+    <!------------ font quickSand ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!------------ font quickSand ---------------->
+    <title>Create Account</title>
+    <!----------------- ----------------->
+    <script defer src="/index.js"></script>
+    <!----------------- ----------------->
+</head>
+<body class="register-main-container">
+    <div class="register-container">
+        <form method="post" action="/register">
+                <h4>CREATE ACCOUNT</h4>
+
+                <div class="input-content">
+                    <label for="fname"> Full Name</label>
+                    <input type="text" id="fname" name="fname" class="field"  placeholder="e.g Bernard Banda">
+                </div>
+                
+
+                <div class="input-content">
+                    <label for="Dob"> Date Of Birth</label>
+                    <input type="date" id="Dob" name="Dob" class="field" />
+                </div>
+
+                <div class="input-content">
+                    <label for="email">Email</label>
+                    <input type="text" id="Pnumber" name="email" class="field"  placeholder="e.g banda@gmail.com">
+                </div>
+
+                 <div class="input-content">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="field">
+                </div>
+
+                <button class="bt-register">Create</button>
+                <div class="already-acc">
+                    <h5>Already have account? <a href="/login"> Login </a></h5>
+                </div>
+        </form>
+    </div>
+</body>
+</html>
